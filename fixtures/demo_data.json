@@ -1,0 +1,307 @@
+[
+  {
+    "model": "library.author",
+    "pk": 1,
+    "fields": {
+      "name": "Robert C. Martin",
+      "biography": "Author of Clean Code and other classics."
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 2,
+    "fields": {
+      "name": "Martin Fowler",
+      "biography": "Known for books on software architecture and refactoring."
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 3,
+    "fields": {
+      "name": "Donald Knuth",
+      "biography": "Creator of The Art of Computer Programming series."
+    }
+  },
+  {
+    "model": "library.category",
+    "pk": 1,
+    "fields": {
+      "name": "Software Engineering"
+    }
+  },
+  {
+    "model": "library.category",
+    "pk": 2,
+    "fields": {
+      "name": "Computer Science"
+    }
+  },
+  {
+    "model": "library.category",
+    "pk": 3,
+    "fields": {
+      "name": "Programming"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 1,
+    "fields": {
+      "title": "Clean Code",
+      "author": 1,
+      "ISBN": "9780132350884",
+      "category": 1,
+      "availability_status": true,
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 2,
+    "fields": {
+      "title": "Clean Architecture",
+      "author": 1,
+      "ISBN": "9780134494166",
+      "category": 1,
+      "availability_status": true,
+      "created_at": "2024-01-02T12:00:00Z",
+      "updated_at": "2024-01-02T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 3,
+    "fields": {
+      "title": "Refactoring",
+      "author": 2,
+      "ISBN": "9780201485677",
+      "category": 1,
+      "availability_status": false,
+      "created_at": "2024-01-03T12:00:00Z",
+      "updated_at": "2024-01-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 4,
+    "fields": {
+      "title": "Patterns of Enterprise Application Architecture",
+      "author": 2,
+      "ISBN": "9780321127426",
+      "category": 2,
+      "availability_status": true,
+      "created_at": "2024-01-04T12:00:00Z",
+      "updated_at": "2024-01-04T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 5,
+    "fields": {
+      "title": "The Art of Computer Programming Vol 1",
+      "author": 3,
+      "ISBN": "9780201896831",
+      "category": 2,
+      "availability_status": true,
+      "created_at": "2024-01-05T12:00:00Z",
+      "updated_at": "2024-01-05T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 6,
+    "fields": {
+      "title": "The Art of Computer Programming Vol 2",
+      "author": 3,
+      "ISBN": "9780201896848",
+      "category": 2,
+      "availability_status": true,
+      "created_at": "2024-01-06T12:00:00Z",
+      "updated_at": "2024-01-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 7,
+    "fields": {
+      "title": "Working Effectively with Legacy Code",
+      "author": 1,
+      "ISBN": "9780131177055",
+      "category": 1,
+      "availability_status": false,
+      "created_at": "2024-01-07T12:00:00Z",
+      "updated_at": "2024-01-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 8,
+    "fields": {
+      "title": "Domain-Driven Design",
+      "author": 2,
+      "ISBN": "9780321125217",
+      "category": 2,
+      "availability_status": true,
+      "created_at": "2024-01-08T12:00:00Z",
+      "updated_at": "2024-01-08T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 9,
+    "fields": {
+      "title": "Structure and Interpretation of Computer Programs",
+      "author": 3,
+      "ISBN": "9780262510875",
+      "category": 2,
+      "availability_status": false,
+      "created_at": "2024-01-09T12:00:00Z",
+      "updated_at": "2024-01-09T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 10,
+    "fields": {
+      "title": "Introduction to Algorithms",
+      "author": 3,
+      "ISBN": "9780262033848",
+      "category": 2,
+      "availability_status": true,
+      "created_at": "2024-01-10T12:00:00Z",
+      "updated_at": "2024-01-10T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 11,
+    "fields": {
+      "title": "The Mythical Man-Month",
+      "author": 2,
+      "ISBN": "9780201835953",
+      "category": 1,
+      "availability_status": true,
+      "created_at": "2024-01-11T12:00:00Z",
+      "updated_at": "2024-01-11T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 12,
+    "fields": {
+      "title": "The Pragmatic Programmer",
+      "author": 1,
+      "ISBN": "9780201616224",
+      "category": 3,
+      "availability_status": true,
+      "created_at": "2024-01-12T12:00:00Z",
+      "updated_at": "2024-01-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 13,
+    "fields": {
+      "title": "Head First Design Patterns",
+      "author": 2,
+      "ISBN": "9780596007126",
+      "category": 3,
+      "availability_status": true,
+      "created_at": "2024-01-13T12:00:00Z",
+      "updated_at": "2024-01-13T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 14,
+    "fields": {
+      "title": "You Don’t Know JS",
+      "author": 1,
+      "ISBN": "9781491904244",
+      "category": 3,
+      "availability_status": false,
+      "created_at": "2024-01-14T12:00:00Z",
+      "updated_at": "2024-01-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 15,
+    "fields": {
+      "title": "Fluent Python",
+      "author": 1,
+      "ISBN": "9781491946008",
+      "category": 3,
+      "availability_status": true,
+      "created_at": "2024-01-15T12:00:00Z",
+      "updated_at": "2024-01-15T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 16,
+    "fields": {
+      "title": "Python Crash Course",
+      "author": 2,
+      "ISBN": "9781593276034",
+      "category": 3,
+      "availability_status": true,
+      "created_at": "2024-01-16T12:00:00Z",
+      "updated_at": "2024-01-16T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 17,
+    "fields": {
+      "title": "Eloquent JavaScript",
+      "author": 2,
+      "ISBN": "9781593279509",
+      "category": 3,
+      "availability_status": true,
+      "created_at": "2024-01-17T12:00:00Z",
+      "updated_at": "2024-01-17T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 18,
+    "fields": {
+      "title": "Cracking the Coding Interview",
+      "author": 1,
+      "ISBN": "9780984782857",
+      "category": 3,
+      "availability_status": true,
+      "created_at": "2024-01-18T12:00:00Z",
+      "updated_at": "2024-01-18T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 19,
+    "fields": {
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "author": 2,
+      "ISBN": "9780201633610",
+      "category": 3,
+      "availability_status": true,
+      "created_at": "2024-01-19T12:00:00Z",
+      "updated_at": "2024-01-19T12:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 20,
+    "fields": {
+      "title": "Algorithms",
+      "author": 3,
+      "ISBN": "9780321573513",
+      "category": 2,
+      "availability_status": true,
+      "created_at": "2024-01-20T12:00:00Z",
+      "updated_at": "2024-01-20T12:00:00Z"
+    }
+  }
+]
