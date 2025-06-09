@@ -18,7 +18,6 @@ class AuthorViewSet(ModelViewSet):
     serializer_class = AuthorSerializer
 
 class BookViewSet(ModelViewSet):
-    # queryset = Book.objects.all()
     queryset = Book.objects.select_related('author', 'category').all()
     serializer_class = BookSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
@@ -27,18 +26,7 @@ class BookViewSet(ModelViewSet):
     ordering_fields = ['category']
     pagination_class = DefaultPagination
 
-'''
-class MemberViewSet(ModelViewSet):
-    queryset = Member.objects.all()
-    serializer_class = MemberSerializer
-
-class BorrowRecordViewSet(ModelViewSet):
-    queryset = BorrowRecord.objects.all()
-    serializer_class = BorrowRecordSerializer
-'''
-
 class ReviewViewSet(ModelViewSet):
-    # queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
     def get_queryset(self):

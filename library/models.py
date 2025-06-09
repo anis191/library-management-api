@@ -30,26 +30,6 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-'''
-# Member Model-->
-class Member(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    membership_date = models.DateField(auto_now_add=True)
-
-    def __str__(self):
-        return self.name
-
-# BorrowRecord Model-->
-class BorrowRecord(models.Model):
-    book = models.ForeignKey(Book, on_delete=models.CASCADE)
-    member = models.ForeignKey(Member, on_delete=models.CASCADE)
-    borrow_date = models.DateField(auto_now_add=True)
-    return_date = models.DateField(null=True, blank=True)
-
-    def __str__(self):
-        return f"{self.member.name} borrowed {self.book.title}"
-'''
-
 class Review(models.Model):
     book = models.ForeignKey(
         Book,

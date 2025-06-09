@@ -9,7 +9,15 @@ class User(AbstractUser):
     address = models.TextField(blank=True, null=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
 
-    USERNAME_FIELD = 'email'  # Use email instead of username
+    LIBRARIAN = 'Librarian'
+    MEMBER = 'Member'
+    ROLE_CHOICES = [
+        (LIBRARIAN, 'Librarian'),
+        (MEMBER, 'Member'),
+    ]
+    role = models.CharField(max_length=20,choices=ROLE_CHOICES,null=True,blank=True,default=None)
+    
+    USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
     objects = CustomUserManager()

@@ -27,22 +27,6 @@ class BookSerializer(serializers.ModelSerializer):
         if value is False:
             raise serializers.ValidationError("This book is not available!")
         return value
-
-'''
-class MemberSerializer(serializers.ModelSerializer):
-    user_name = serializers.ReadOnlyField(source='user.get_full_name')
-    class Meta:
-        model = Member
-        fields = ['id','user','user_name','membership_date']
-
-class BorrowRecordSerializer(serializers.ModelSerializer):
-    member_name = serializers.ReadOnlyField(source='member.user.get_full_name')
-    book_title = serializers.ReadOnlyField(source='book.title')
-
-    class Meta:
-        model = BorrowRecord
-        fields = ['id','member','member_name','book','book_title','borrow_date','return_date']
-'''
         
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
