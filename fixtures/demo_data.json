@@ -1,7 +1,7 @@
 [
   {
     "model": "library.author",
-    "pk": 1,
+    "pk": 3,
     "fields": {
       "name": "Robert C. Martin",
       "biography": "Author of Clean Code and other classics."
@@ -9,7 +9,7 @@
   },
   {
     "model": "library.author",
-    "pk": 2,
+    "pk": 4,
     "fields": {
       "name": "Martin Fowler",
       "biography": "Known for books on software architecture and refactoring."
@@ -17,7 +17,7 @@
   },
   {
     "model": "library.author",
-    "pk": 3,
+    "pk": 5,
     "fields": {
       "name": "Donald Knuth",
       "biography": "Creator of The Art of Computer Programming series."
