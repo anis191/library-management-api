@@ -41,11 +41,11 @@ class ReviewViewSet(ModelViewSet):
 
     def get_queryset(self):
         return Review.objects.filter(
-            book_id = self.kwargs['book_pk']
+            book_id = self.kwargs.get('book_pk')
         )
 
     def get_serializer_context(self):
-        return {'book_id' : self.kwargs['book_pk']}
+        return {'book_id' : self.kwargs.get('book_pk')}
     """ Note:
     ViewSet er modde always ekta 'kwargs' thake, jekane 'domain_pk' name e product ta thake.
     Eai khatree 'domain' holo 'book'. So specific product/book er id ta pabo 'book_pk' name e.

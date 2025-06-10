@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'django_filters',
     'rest_framework',
     'djoser',
@@ -160,3 +161,13 @@ DJOSER = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+SWAGGER_SETTINGS = {
+   'SECURITY_DEFINITIONS': {
+      'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description' : 'Enter your JWT token in the format: `JWT<space><your_token>`'
+      }
+   }
+}

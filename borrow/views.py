@@ -24,11 +24,11 @@ class CartItemViewSet(ModelViewSet):
 
     def get_queryset(self):
         return CartItem.objects.filter(
-            cart_id = self.kwargs['cart_pk']
+            cart_id = self.kwargs.get('cart_pk')
         )
     
     def get_serializer_context(self):
-        return {'cart_id' : self.kwargs['cart_pk']}
+        return {'cart_id' : self.kwargs.get('cart_pk')}
 
 class BorrowViewSet(ModelViewSet):
     http_method_names = ['get','delete','put','head','options']
@@ -51,6 +51,9 @@ class BorrowViewSet(ModelViewSet):
         return BorrowSerializer
 
     def get_queryset(self):
+        if getattr(self, 'swagger_fake_view',False):
+            return Borrow.objects.none()
+        
         if self.request.user.is_staff is True or self.request.user.role == User.LIBRARIAN:
             return Borrow.objects.prefetch_related('items__book').all()
         return Borrow.objects.prefetch_related('items__book').filter(
@@ -70,6 +73,9 @@ class MemberViewSet(ModelViewSet):
     permission_classes = [IsLibrarianOrAdminOrReadOnly]
 
     def get_queryset(self):
+        if getattr(self, 'swagger_fake_view',False):
+            return Member.objects.none()
+        
         if self.request.user.role == User.LIBRARIAN or self.request.user.is_staff:
             return Member.objects.all()
         return Member.objects.filter(
