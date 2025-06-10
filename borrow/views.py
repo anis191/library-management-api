@@ -31,7 +31,7 @@ class CartItemViewSet(ModelViewSet):
         return {'cart_id' : self.kwargs.get('cart_pk')}
 
 class BorrowViewSet(ModelViewSet):
-    http_method_names = ['get','delete','put','head','options']
+    http_method_names = ['get','post','delete','put','head','options']
     
     @action(detail=True, methods=['put'])
     def update_status(self, request, pk=None):
@@ -55,7 +55,8 @@ class BorrowViewSet(ModelViewSet):
             return Borrow.objects.none()
         
         if self.request.user.is_staff is True or self.request.user.role == User.LIBRARIAN:
-            return Borrow.objects.prefetch_related('items__book').all()
+            return Borrow.objects.prefetch_related('items__book__author','items__book__category').all()
+            # return Borrow.objects.prefetch_related('items__book').all()
         return Borrow.objects.prefetch_related('items__book').filter(
             user = self.request.user
         )
