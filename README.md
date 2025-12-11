@@ -140,9 +140,10 @@ Contributions help make this project better and are always welcome!
 Ensure your code follows the project standards and passes all tests.
 
 ## 💻 Author
+**Anisul Alam**  
+Full-Stack Developer | Django | React | PostgreSQL
 
-[**Anisul Alam**](https://github.com/anis191)  
-Backend Developer | Django & REST APIs  
-[🔗 LinkedIn](https://www.linkedin.com/in/anisul-alam-a330042a9/)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anisulalam/)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-000?style=flat&logo=vercel&logoColor=white)](https://anisulalam.vercel.app/)
 
 ---
